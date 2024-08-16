@@ -1,0 +1,164 @@
+
+
+local Player = game.Players.LocalPlayer
+print(Player)
+
+
+local changergui = game:GetService("Players").LocalPlayer.PlayerGui.MainGui.MainFrame.InteractionFrame.ItemModdingBox.AttachmentsFrame:Clone()
+local MainGui = Instance.new('ScreenGui')
+
+
+local defInterList = game:GetService("Players").LocalPlayer.PlayerGui.MainGui.MainFrame.InteractionFrame.InteractionList:Clone()
+defInterList.Parent = MainGui
+
+
+
+--SKINS
+local dv2katowicetitan = defInterList.Interaction
+dv2katowicetitan.Name = 'DVKATOWICETITAN'
+dv2katowicetitan.Decor.Text = 'Dv2 Katowice Titan 2014'
+
+local dv2katowicepower = defInterList.Loot
+dv2katowicepower.Name = 'DVKATOVICEPOWER'
+dv2katowicepower.Decor.Text = 'Dv2 Katowice Power 2014'
+dv2katowicepower.Visible = true
+
+
+local crownboss = defInterList.CloseDoor
+crownboss.Name = 'DVCROWNKING'
+crownboss.Decor.Text = 'Dv2 Boss Crown'
+crownboss.Visible = true
+
+local firehouse = defInterList.ChangeSeat
+firehouse.Name = 'DVCROWNKING'
+firehouse.Decor.Text = 'Dv2 Fire House Skin [ New ]'
+firehouse.Visible = true
+
+local ice = defInterList.EnterVehicle
+ice.Name = 'DVICE'
+ice.Decor.Text = 'Dv2 Ice Blizzard Skin [ New ]'
+ice.Visible = true
+
+local blood = defInterList.Modify
+blood.Name = 'DVBLOOD'
+blood.Decor.Text = 'Dv2 Blood Bath Skin [ New ]'
+blood.Visible = true
+
+local galaxy = defInterList.FixTire
+galaxy.Name = 'DVGALAXY'
+galaxy.Decor.Text = 'Dv2 Galaxy Skin [ New ]'
+galaxy.Visible = true
+
+--PARTICLES
+
+
+MainGui.Parent = Player.PlayerGui
+MainGui.Name = 'Mod'
+changergui.Parent = MainGui
+changergui.Position = UDim2.new(0.381999969, 0, 0.994000018, -100)
+changergui.Muzzle.Name = 'Skin'
+changergui.Skin.SlotType.Text = 'SKIN'
+
+changergui.Sight.Name = 'Test'
+changergui.Test.SlotType.Text = 'Test'
+
+changergui.Extra.Name = 'Particles'
+changergui.Particles.SlotType.Text = 'PARTICLES'
+
+changergui.Magazine.Name = 'Test'
+changergui.Test.SlotType.Text = 'Test'
+
+local ITEMBUTTON = changergui.Skin.ClickDetector
+local dd1 = true
+defInterList.Visible = false
+ITEMBUTTON.MouseButton1Click:Connect(function()
+    print('clicked')
+    if dd1 == true then
+        defInterList.Visible = true
+        dd1 = false
+    elseif dd1 == false then
+        defInterList.Visible = false
+        dd1 = true
+    end
+
+end)
+
+dv2katowicetitan.TextButton.MouseButton1Click:Connect(function()
+    print('clicked katowicetitan')
+    game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.TextureID = 'rbxassetid://18973032860'
+    defInterList.Visible = false
+    dd1 = true
+    if game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent then
+         game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent = game.ReplicatedStorage
+    end
+
+
+
+end)
+
+dv2katowicepower.TextButton.MouseButton1Click:Connect(function()
+    print('clicked katowicepower')
+    game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.TextureID = 'rbxassetid://18973008817'
+    defInterList.Visible = false
+    dd1 = true
+    if game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent then
+         game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent = game.ReplicatedStorage
+    end
+
+end)
+
+
+crownboss.TextButton.MouseButton1Click:Connect(function()
+    print('clicked crownboss')
+    game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.TextureID = 'rbxassetid://18973131561'
+    defInterList.Visible = false
+    dd1 = true
+    if game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent then
+         game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent = game.ReplicatedStorage
+    end
+
+end)
+
+ice.TextButton.MouseButton1Click:Connect(function()
+    print('clicked ice')
+    game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.TextureID = 'rbxassetid://18973292055'
+    defInterList.Visible = false
+    dd1 = true
+    if game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent then
+         game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent = game.ReplicatedStorage
+    end
+
+end)
+
+firehouse.TextButton.MouseButton1Click:Connect(function()
+    print('clicked fire')
+    game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.TextureID = 'rbxassetid://18973259115'
+    defInterList.Visible = false
+    dd1 = true
+    if game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent then
+         game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent = game.ReplicatedStorage
+    end
+
+end)
+
+blood.TextButton.MouseButton1Click:Connect(function()
+    print('clicked blood')
+    game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.TextureID = 'rbxassetid://18973608392'
+    defInterList.Visible = false
+    dd1 = true
+    if game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent then
+         game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent = game.ReplicatedStorage
+    end
+
+end)
+
+galaxy.TextButton.MouseButton1Click:Connect(function()
+    print('clicked galaxy')
+    game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.TextureID = 'rbxassetid://18973690727'
+    defInterList.Visible = false
+    dd1 = true
+    if game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent then
+         game.ReplicatedStorage.ViewModels.DV2.Item.ItemRoot.SurfaceAppearance.Parent = game.ReplicatedStorage
+    end
+
+end)
